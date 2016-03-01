@@ -9,6 +9,25 @@ Benutzung auf eigene Gefahr! Rauchen kann tödlich sein!
 * Archiv herunterladen:  
    für 4.9: https://github.com/vanilla-thunder/bla-staticbrutto/archive/master.zip  
    für 4.6: https://github.com/vanilla-thunder/bla-staticbrutto/archive/4.6.zip
+* entpacken 
+* Inhalt von "copy_this" in den Shop hochladen
+* Prüfen, ob alle benötigten Länder aktiv sind
+* Modul aktivieren
+* F5 drücken
+* Unter "Stammdaten" -> "Mwst. Sätze" die Mehrwersteuersätze eintragen und speichern
+* testen
+* wenns läuft, ein Bierchen trinken. Wenn nicht, dann zwei.
+
+## Funktionsweise 
+In den Einstellungen muss man den Standard-Steuersatz hinterlegen (normalerwise 19%).  
+Falls der Artikel über keinen eigenen Steuersatz verfügt, wird der jeweils volle Steuersatz für das aktuell ausgewählte Rechnungsandressen-Land genommen, sonst der reduzierte Steuersatz.
+### Beispielrechnung:
+Standard Steuersatz: 19%  
+Produkt hat keinen eigenen Steuersatz + Lieferland Österreich -> 20% (bzw das, was ihr eingetragen habt)  
+Produkt hat 7% + Lieferland Österreich -> 9% (bzw das, was ihr eingetragen habt)  
+
+Das Modul läuft bei uns schon seit ein paar Jahren, hier zu sehen https://www.bestlife-shop.de/   
+Bitte Prüft vorher, ob ihr Produkte im Shop habt, die in DE einem reduzierten MwSt Satz unterliegen, in einem anderen Land aber einem vollen MwSt Satz. Wenns so ist, schreibt mich an, wir finden schon eine Lösung. 
 
 
 ### LICENSE AGREEMENT

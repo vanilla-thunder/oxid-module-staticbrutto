@@ -36,7 +36,7 @@ class bla_vat extends oxAdminDetails
 		$aaBlaReducedVat = $cfg->getConfigParam("aaBlaReducedVat");
 		$this->_aViewData["aaBlaReducedVat"] = $aaBlaReducedVat;
 
-		return "hdi_vats.tpl";
+		return "bla_vat.tpl";
 	}
 
 
