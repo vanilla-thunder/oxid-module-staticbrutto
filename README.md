@@ -5,6 +5,10 @@ Bei länderspezifischen Mehrwertsteuersätzen berechnet OXID zuerst den Netto-Pr
 Dieses Modul lässt den Brutto-Preris unabhängig vom Steuersatz gleich bleiben, so dass der Netto-Preis jeweils angepasst wird. 
 Benutzung auf eigene Gefahr! Rauchen kann tödlich sein!
 
+## Installation:
+* Archiv herunterladen:  
+   für 4.9: https://github.com/vanilla-thunder/bla-staticbrutto/archive/master.zip  
+   für 4.6: https://github.com/vanilla-thunder/bla-staticbrutto/archive/4.6.zip
 
 
 ### LICENSE AGREEMENT
