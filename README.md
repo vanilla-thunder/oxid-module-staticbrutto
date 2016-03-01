@@ -15,6 +15,8 @@ Benutzung auf eigene Gefahr! Rauchen kann tödlich sein!
 * Modul aktivieren
 * F5 drücken
 * Unter "Stammdaten" -> "Mwst. Sätze" die Mehrwersteuersätze eintragen und speichern
+* testen
+* wenns läuft, ein Bierchen trinken. Wenn nicht, dann zwei.
 
 ## Funktionsweise 
 In den Einstellungen muss man den Standard-Steuersatz hinterlegen (normalerwise 19%).  
