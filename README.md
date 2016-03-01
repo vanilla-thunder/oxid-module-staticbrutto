@@ -1,24 +1,16 @@
-## ###_COMPANY_### - ###_MODULE_###
-### Modul Version ###_VERSION_###
+## Länderspezifische Mehrwertsteuer + fester Brutto-Preis unabhängig vom Steuersatz Für OXID eShop
+### Modul Version 1.0
+
+Bei länderspezifischen Mehrwertsteuersätzen berechnet OXID zuerst den Netto-Preis und addiert dann die jeweiligen MwSt, wodurch sich der Bruttopreis im WK ändert.
+Dieses Modul lässt den Brutto-Preris unabhängig vom Steuersatz gleich bleiben, so dass der Netto-Preis jeweils angepasst wird. 
+Benutzung auf eigene Gefahr! Rauchen kann tödlich sein!
 
 
-Mit diesem Modul können Sie dezente Hinweise im Warenkorb und im Miniwarenkorb einblenden, die den Besucher darüber informieren, dass die Bestellung ab einem bestimmten Warenwert für ihn kostenlos versendet wird.
-Dieser Wert und die Schwelle, ab der die Hinweise eingeblendet werden, kann in den Moduleinstellungen eingestellt werden. Sollte er auch, ohne Witzt jetzt!
-
-### Installation
-* [https://github.com/vanilla-thunder/bla-vskfreiab/archive/master.zip](https://github.com/vanilla-thunder/bla-vskfreiab/archive/master.zip) herunterladen und entpacken
-* Inhalt von "copy_this" in den Shop hochladen
-
-**oder:**
-* $ cd modules/ 
-* $ mkidir bla && cd bla
-* $ wget https://raw.githubusercontent.com/vanilla-thunder/bla/master/vendormetadata.php
-* $ git clone -b module https://github.com/vanilla-thunder/bla-vskfreiab.git
 
 ### LICENSE AGREEMENT
-   ###_COMPANY_### - ###_MODULE_###  
-   Copyright (C) ###_YEAR_###  ###_COMPANY_###  
-   info:  ###_EMAIL_###  
+   countryspecific VAT and static brutto price no matter of VAT percentage
+   Copyright (C) 2016 bestlife AG
+   info:  oxid@bestlife.ag  
   
    This program is free software;  
    you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;

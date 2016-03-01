@@ -23,7 +23,7 @@ $sMetadataVersion = '1.1';
 $aModule = array(
 	'id' => 'bla-staticbrutto',
 	'title' => '<strong style="color:#95b900;font-size:125%;">best</strong><strong style="color:#c4ca77;font-size:125%;">life</strong> <strong>static brutto price</strong>',
-	'description' => 'Adds support for countryspcefic VAT and calculates and keeps same brutto price among different VAT percentage',
+	'description' => 'Adds support for countryspecific VAT and calculates and keeps same brutto price among different VAT percentage',
 	'thumbnail' => 'bestlife.png',
 	'version' => '1.0.0 (2015-03-15)',
 	'author' => 'Marat Bedoev, bestlife AG',
