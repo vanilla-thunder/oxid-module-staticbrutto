@@ -26,7 +26,6 @@ Standard Steuersatz: 19%
 Produkt hat keinen eigenen Steuersatz + Lieferland Österreich -> 20% (bzw das, was ihr eingetragen habt)  
 Produkt hat 7% + Lieferland Österreich -> 9% (bzw das, was ihr eingetragen habt)  
 
-Das Modul läuft bei uns schon seit ein paar Jahren, hier zu sehen https://www.bestlife-shop.de/   
 Bitte Prüft vorher, ob ihr Produkte im Shop habt, die in DE einem reduzierten MwSt Satz unterliegen, in einem anderen Land aber einem vollen MwSt Satz. Wenns so ist, schreibt mich an, wir finden schon eine Lösung. 
 
 
