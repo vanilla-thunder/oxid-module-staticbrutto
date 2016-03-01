@@ -8,8 +8,8 @@ Benutzung auf eigene Gefahr! Rauchen kann tödlich sein!
 
 
 ### LICENSE AGREEMENT
-   countryspecific VAT and static brutto price no matter of VAT percentage
-   Copyright (C) 2016 bestlife AG
+   countryspecific VAT and static brutto price no matter of VAT percentage  
+   Copyright (C) 2016 bestlife AG  
    info:  oxid@bestlife.ag  
   
    This program is free software;  
