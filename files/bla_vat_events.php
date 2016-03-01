@@ -23,7 +23,7 @@ class bla_vat_events extends oxConfig
 {
 	public static function setup()
 	{
-		$cfg = oxRegistry::getConfig();
+		$cfg = $this->getConfig();
 		$var = $cfg->getConfigParam("aaBlaFullVat");
 		if( empty($var) )
 		{

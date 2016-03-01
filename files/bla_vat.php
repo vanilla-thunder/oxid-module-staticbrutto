@@ -24,7 +24,7 @@ class bla_vat extends oxAdminDetails
 	public function render()
 	{
 		parent::render();
-		$cfg = oxRegistry::getConfig();
+		$cfg = $this->getConfig();
 
 		$aCountries = oxNew("oxcountrylist");
 		$aCountries->loadActiveCountries();
@@ -36,20 +36,20 @@ class bla_vat extends oxAdminDetails
 		$aaBlaReducedVat = $cfg->getConfigParam("aaBlaReducedVat");
 		$this->_aViewData["aaBlaReducedVat"] = $aaBlaReducedVat;
 
-		return "hdi_vats.tpl";
+		return "bla_vat.tpl";
 	}
 
 
 	public function save_vats()
 	{
-		$cfg = oxRegistry::getConfig();
+		$cfg = $this->getConfig();
 
 		// first vat rates
-		$aaBlaFullVat = $cfg->getRequestParameter("aaBlaFullVat");
+		$aaBlaFullVat = $cfg->getParameter("aaBlaFullVat");
 		$cfg->saveShopConfVar("aarr", "aaBlaFullVat", $aaBlaFullVat, null,"module:bla-staticbrutto");
 
 		// second vat rates
-		$aaBlaReducedVat = $cfg->getRequestParameter("aaBlaReducedVat");
+		$aaBlaReducedVat = $cfg->getParameter("aaBlaReducedVat");
 		$cfg->saveShopConfVar("aarr", "aaBlaReducedVat", $aaBlaReducedVat, null, "module:bla-staticbrutto");
 		
 		$this->_aViewData["msg"] = "gespeichert!";

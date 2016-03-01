@@ -28,8 +28,8 @@ $aLang = array(
 
 	// tempalte keys
 	'bla_vat_country' => 'Land',
-	'bla_vat_first' => 'MwSt. Satz 1',
-	'bla_vat_second' => 'MwSt. Satz 2',
+	'bla_vat_first' => 'Voll',
+	'bla_vat_second' => 'Reduziert',
 
 	'bla_vat_save' => 'Speichern',
 	'bla_vat' => 'MwSt. Sätze',
