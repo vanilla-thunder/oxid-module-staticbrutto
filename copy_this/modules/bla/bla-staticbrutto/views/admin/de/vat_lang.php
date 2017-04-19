@@ -22,9 +22,9 @@
 $sLangName = 'Deutsch';
 $aLang = array(
 	'charset' => 'UTF-8',
-	'SHOP_MODULE_GROUP_blaVatMain' => '<style type="text/css">.groupExp a.rc b {font-size: medium; color: #ff3600; }.groupExp dt input.txt { width: 400px !important} .groupExp dl { display: block !important; } input.confinput {position: fixed; top: 20px; right: 70px; background: #008B2D; padding: 5px 20px; color: white; border: 1px solid black; cursor:pointer; font-size: 125%; } input.confinput:hover {outline: 3px solid #ff3600;}</style>Mehrwertsteuersätze',
-	'SHOP_MODULE_aaBlaFullVat' => 'die vollen MwSt. Sätze',
-	'SHOP_MODULE_aaBlaReducedVat' => 'die verminderten MwSt. Sätze',
+	'SHOP_MODULE_GROUP_blaVatMain' => '<style type="text/css">.groupExp a.rc b {font-size: medium; color: #ff3600; }.groupExp dt input.txt { width: 400px !important} .groupExp dl { display: block !important; } input.confinput {position: fixed; top: 20px; right: 70px; background: #008B2D; padding: 5px 20px; color: white; border: 1px solid black; cursor:pointer; font-size: 125%; } input.confinput:hover {outline: 3px solid #ff3600;}</style>Mehrwertsteuers&auml;tze',
+	'SHOP_MODULE_aaBlaFullVat' => 'die vollen MwSt. S&auml;tze',
+	'SHOP_MODULE_aaBlaReducedVat' => 'die verminderten MwSt. S&auml;tze',
 
 	// tempalte keys
 	'bla_vat_country' => 'Land',
@@ -32,6 +32,6 @@ $aLang = array(
 	'bla_vat_second' => 'MwSt. Satz 2',
 
 	'bla_vat_save' => 'Speichern',
-	'bla_vat' => 'MwSt. Sätze',
+	'bla_vat' => '[bla] MwSt. S&auml;tze',
 
 );

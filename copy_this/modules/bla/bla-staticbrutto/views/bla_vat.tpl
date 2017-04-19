@@ -1,9 +1,15 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-	"http://www.w3.org/TR/html4/loose.dtd">
+<!DOC<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
+	<title>[{ oxmultilang ident="MAIN_TITLE" }]</title>
+	<link rel="stylesheet" href="[{$oViewConf->getResourceUrl()}]main.css">
+	<link rel="stylesheet" href="[{$oViewConf->getResourceUrl()}]colors.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=[{$charset}]">
 </head>
 <body>
+
+<h1 style="text-align: center;">[{ oxmultilang ident="bla_vat" }]</h1>
+
 <form name="transfer" id="transfer" action="[{ $oViewConf->getSelfLink() }]" method="post">
 	[{ $oViewConf->getHiddenSid() }]
 	<input type="hidden" name="oxid" value="[{ $oxid }]">
@@ -26,8 +32,8 @@
 			[{assign var="id" value=$country->oxcountry__oxid->value }]
 			<tr>
 				<td><label>[{$country->oxcountry__oxtitle->value}]</label></td>
-				<td><input type="text" name="aaBlaFullVat[[{$country->oxcountry__oxid->value}]]"  value="[{ $firstvats.$id }]"  size="3"/>%</td>
-				<td><input type="text" name="aaBlaReducedVat[[{$country->oxcountry__oxid->value}]]" value="[{ $secondvats.$id }]" size="3"/>%</td>
+				<td><input type="text" name="aaBlaFullVat[[{$country->oxcountry__oxid->value}]]"  value="[{ $aaBlaFullVat.$id }]"  size="3"/>%</td>
+				<td><input type="text" name="aaBlaReducedVat[[{$country->oxcountry__oxid->value}]]" value="[{ $aaBlaReducedVat.$id }]" size="3"/>%</td>
 			</tr>
 		[{/foreach}]
 		<tr>
