@@ -25,7 +25,7 @@ $aModule = array(
 	'title' => '<strong style="color:#95b900;font-size:125%;">best</strong><strong style="color:#c4ca77;font-size:125%;">life</strong> <strong>static brutto price</strong>',
 	'description' => 'Adds support for countryspecific VAT and calculates and keeps same brutto price among different VAT percentage',
 	'thumbnail' => 'bestlife.png',
-	'version' => '1.0.0 (2015-03-15)',
+	'version' => '1.0.1 (2017-04-19)',
 	'author' => 'Marat Bedoev, bestlife AG',
 	'email' => 'oxid@bestlife.ag',
 	'url' => 'http://www.bestlife.ag',
