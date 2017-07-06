@@ -22,7 +22,7 @@
 class oxvatselector_vat extends oxvatselector_vat_parent
 {
 
-    public function getArticleVat(oxArticle $oArticle)
+    public function getArticleVat(oxArticle $oArticle, $blDefaultVat = 0)
     {
         /*
         startProfile("_assignPriceInternal");
@@ -44,6 +44,12 @@ class oxvatselector_vat extends oxvatselector_vat_parent
         */
 
         $ret = parent::getArticleVat($oArticle);
+
+        if ($blDefaultVat) {
+            return $ret;
+        }
+
+
         $cfg = oxRegistry::getConfig();
 
         if ($oUser = oxRegistry::getSession()->getBasket()->getBasketUser())
@@ -57,4 +63,5 @@ class oxvatselector_vat extends oxvatselector_vat_parent
 
         return $ret;
     }
+
 }

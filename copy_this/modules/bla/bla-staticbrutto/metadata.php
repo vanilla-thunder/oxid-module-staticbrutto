@@ -30,7 +30,8 @@ $aModule = array(
 	'email' => 'oxid@bestlife.ag',
 	'url' => 'http://www.bestlife.ag',
 	'extend' => array(
-		'oxvatselector' => 'bla/bla-staticbrutto/extend/oxvatselector_vat'
+		'oxvatselector' => 'bla/bla-staticbrutto/extend/oxvatselector_vat',
+		'oxarticle' => 'bla/bla-staticbrutto/extend/oxarticle_vat',
 	),
 	'files' => array(
 		'bla_vat' => 'bla/bla-staticbrutto/files/bla_vat.php',
