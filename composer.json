@@ -1,0 +1,39 @@
+{
+  "name": "proudcommerce/bla-staticbrutto",
+  "version": "2.0.0",
+  "description": "bestlife static brutto price",
+  "type": "oxideshop-module",
+  "license": [
+    "proprietary"
+  ],
+  "authors": [
+    {
+      "name": "ProudCommerce",
+      "homepage": "https://www.proudcommerce.com/",
+      "email": "welcome@proudcommerce.com",
+      "role": "Developer"
+    },
+    {
+      "name": "bestlife AG",
+      "homepage": "http://www.bestlife.ag",
+      "email": "oxid@bestlife.ag",
+      "role": "Developer"
+    }
+  ],
+  "support": {
+    "email": "oxid@bestlife.ag"
+  },
+  "require": {
+    "php": ">= 7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ProudCommerce\\Bla\\StaticBrutto\\": "../../../source/modules/bla/staticbrutto"
+    }
+  },
+  "extra": {
+    "oxideshop": {
+      "target-directory": "bla/staticbrutto"
+    }
+  }
+}

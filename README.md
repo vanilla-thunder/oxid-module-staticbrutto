@@ -1,16 +1,16 @@
 ## Länderspezifische Mehrwertsteuer + fester Brutto-Preis unabhängig vom Steuersatz Für OXID eShop
-### Modul Version 1.0
+### Modul Version 2.0
 
 Bei länderspezifischen Mehrwertsteuersätzen berechnet OXID zuerst den Netto-Preis und addiert dann die jeweiligen MwSt, wodurch sich der Bruttopreis im WK ändert.
 Dieses Modul lässt den Brutto-Preris unabhängig vom Steuersatz gleich bleiben, so dass der Netto-Preis jeweils angepasst wird. 
 Benutzung auf eigene Gefahr! Rauchen kann tödlich sein!
 
 ## Installation:
-* Archiv herunterladen:  
-   für 4.9: https://github.com/vanilla-thunder/bla-staticbrutto/archive/master.zip  
-   für 4.6: https://github.com/vanilla-thunder/bla-staticbrutto/archive/4.6.zip
-* entpacken 
-* Inhalt von "copy_this" in den Shop hochladen
+* Backup von Shop und Datenbank erstellen.
+* Composer ausführen:
+```composer require proudcommerce/bla-staticbrutto```
+
+* Cache löschen.
 * Prüfen, ob alle benötigten Länder aktiv sind
 * Modul aktivieren
 * F5 drücken
