@@ -22,10 +22,13 @@ class VatSelector extends VatSelector_parent
         if ($oUser = Registry::getSession()->getBasket()->getBasketUser())
         {
             // got default vat?
-            $aVatRates   = ($ret == $cfg->getConfigParam('dDefaultVAT')) ? Registry::getConfig()->getConfigParam("aaBlaFullVat") : Registry::getConfig()->getConfigParam("aaBlaReducedVat");
-            $sVatCountry = $this->_getVatCountry($oUser);
-            if (isset($aVatRates[$sVatCountry]))
-                $ret = $aVatRates[$sVatCountry];
+            if ($ret > 0) {
+                $aVatRates   = ($ret == $cfg->getConfigParam('dDefaultVAT')) ? Registry::getConfig()->getConfigParam("aaBlaFullVat") : Registry::getConfig()->getConfigParam("aaBlaReducedVat");
+                $sVatCountry = $this->_getVatCountry($oUser);
+                if (isset($aVatRates[$sVatCountry])) {
+                    $ret = $aVatRates[$sVatCountry];
+                }
+            }
         }
 
         return $ret;
