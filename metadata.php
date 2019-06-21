@@ -33,7 +33,7 @@ $aModule = array(
         <br /><br />Da es zum Zeitpunkt der Migration auf OXID 6 keinen eingetragenen Vendor-Namespace für die Bestlife AG gab, wurde es in den Namespace von ProudCommerce gechrieben, um Probleme zu vermeiden.',
         'en' => 'Adds support for countryspecific VAT and calculates and keeps same brutto price among different VAT percentage',
     ],
-    'version' => '2.0.0',
+    'version' => '2.0.1',
     'thumbnail' => 'bestlife.png',
     'author' => 'Marat Bedoev, bestlife, ProudCommerce',
     'url' => 'http://www.bestlife.ag',
