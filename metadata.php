@@ -1,20 +1,16 @@
 <?php
-/**
+/*
+ * vanilla-thunder/oxid-module-staticbrutto
+ * country specific VAT and static brutto prices for OXID eShop V6.2 and newer
  *
- * @package ##@@PACKAGE@@##
- * @version ##@@VERSION@@##
- * @link www.proudcommerce.com
- * @author Proud Sourcing <support@proudcommerce.com>
- * @copyright Proud Sourcing GmbH | 2019
+ * This program is free software;
+ * you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;
+ * either version 3 of the License, or (at your option) any later version.
  *
- * This Software is the property of Proud Sourcing GmbH
- * and is protected by copyright law, it is not freeware.
- *
- * Any unauthorized use of this software without a valid license
- * is a violation of the license agreement and will be
- * prosecuted by civil and criminal law.
- *
- **/
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY;
+ *  without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * You should have received a copy of the GNU General Public License along with this program; if not, see <http://www.gnu.org/licenses/>
+ */
 
 /**
  * Metadata version
@@ -25,52 +21,42 @@ $sMetadataVersion = '2.0';
  * Module information
  */
 $aModule = array(
-    'id' => 'bla-staticbrutto',
-    'title' => '<strong style="color:#95b900;font-size:125%;">best</strong><strong style="color:#c4ca77;font-size:125%;">life</strong> <strong>static brutto price</strong>',
+    'id' => 'vt-staticbrutto',
+    'title' => [
+        'de' => '[vt] statische brutto Preise',
+        'en' => '[vt] static brutto prices'
+    ],
     'description' => [
-        'de' => 'Adds support for countryspecific VAT and calculates and keeps same brutto price among different VAT percentage
-        
-        <br /><br />Da es zum Zeitpunkt der Migration auf OXID 6 keinen eingetragenen Vendor-Namespace für die Bestlife AG gab, wurde es in den Namespace von ProudCommerce gechrieben, um Probleme zu vermeiden.',
-        'en' => 'Adds support for countryspecific VAT and calculates and keeps same brutto price among different VAT percentage',
+        'de' => '<ul><li>grundlegende Unterstützung für länderspezifische Mehrwertwsteuersätze</li><li>behält den selben Brutto Preis bei unterschiedlichen MwSt. Sätzen</li></ul><img src="../modules/vt/StaticBrutto/thumbnail.jpg"/>',
+        'en' => '<ul><li>basic support for country specific VAT</li><li>keeps same brutto price among different VAT percentages</li></ul><img src="../modules/vt/StaticBrutto/thumbnail.jpg"/>',
     ],
-    'version' => '2.0.2',
-    'thumbnail' => 'bestlife.png',
-    'author' => 'Marat Bedoev, bestlife, ProudCommerce',
-    'url' => 'http://www.bestlife.ag',
-    'email' => 'oxid@bestlife.ag',
-    'controllers' => [
-        'bla_vat' => \ProudCommerce\Bla\StaticBrutto\Application\Controllers\Admin\VatController::class,
-    ],
-
+    'version' => '2.1.0',
+    'thumbnail' => '',
+    'author' => 'Marat Bedoev & ProudCommerce & Florian Palme',
+    'url' => 'https://github.com/vanilla-thunder/oxid-module-staticbrutto',
+    'email' => openssl_decrypt("Az6pE7kPbtnTzjHlPhPCa4ktJLphZ/w9gKgo5vA//p4=", str_rot13("nrf-128-pop"), str_rot13("gvalzpr")),
     'extend' => [
-        \OxidEsales\Eshop\Application\Model\VatSelector::class
-        => \ProudCommerce\Bla\StaticBrutto\Application\Model\VatSelector::class,
+        \OxidEsales\Eshop\Application\Model\VatSelector::class => \VanillaThunder\StaticBrutto\Application\Extend\VatSelector::class,
     ],
-
+    'controllers' => [
+        'vt_staticbrutto_vats' => \VanillaThunder\StaticBrutto\Application\Controllers\Admin\VatController::class,
+    ],
     'templates' => [
-        'bla_vat.tpl' => 'bla/staticbrutto/Application/views/admin/bla_vat.tpl'
+        'vt_staticbrutto_vats.tpl' => 'vt/StaticBrutto/Application/views/admin/vt_staticbrutto_vats.tpl'
     ],
-
-    'blocks' => [
-    ],
-
     'settings' => [
         [
-            'group' => 'blaVatMain',
-            'name' => 'aaBlaFullVat',
+            'group' => 'StaticBruttoVatMain',
+            'name' => 'aaStaticBruttoFullVat',
             'type' => 'aarr',
-            'value' => ''
+            'value' => []
         ],
 
         [
-            'group' => 'blaVatMain',
-            'name' => 'aaBlaReducedVat',
+            'group' => 'StaticBruttoVatMain',
+            'name' => 'aaStaticBruttoReducedVat',
             'type' => 'aarr',
-            'value' => ''
+            'value' => []
         ],
-    ],
-
-    'events' => [
-        'onActivate' => '\ProudCommerce\Bla\StaticBrutto\Core\Events::setup',
-    ],
+    ]
 );

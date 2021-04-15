@@ -1,26 +1,22 @@
 ## Länderspezifische Mehrwertsteuer + fester Brutto-Preis unabhängig vom Steuersatz Für OXID eShop
-### Modul Version 2.0
+### Modul Version 2.1.0
 
-Bei länderspezifischen Mehrwertsteuersätzen berechnet OXID zuerst den Netto-Preis und addiert dann die jeweiligen MwSt, wodurch sich der Bruttopreis im WK ändert.
+Bei länderspezifischen Mehrwertsteuersätzen berechnet OXID zuerst den Netto-Preis und addiert dann die jeweiligen MwSt dazu, wodurch sich der Bruttopreis im WK ändert.
 Dieses Modul lässt den Brutto-Preris unabhängig vom Steuersatz gleich bleiben, so dass der Netto-Preis jeweils angepasst wird. 
-Benutzung auf eigene Gefahr! Rauchen kann tödlich sein!
 
-## Installation:
-* Backup von Shop und Datenbank erstellen.
-* Composer ausführen:
-```composer require proudcommerce/bla-staticbrutto```
 
-* Cache löschen.
+## Installation & Konfiguration:
+* Composer Befehl ausführen: `composer require vanilla-thunder/oxid-module-staticbrutto`
+* In den Einstellungen den Standard-Steuersatz hinterlegen (z.B. 19% für DE)
 * Prüfen, ob alle benötigten Länder aktiv sind
 * Modul aktivieren
-* F5 drücken
+* Admin neuladen
 * Unter "Stammdaten" -> "Mwst. Sätze" die Mehrwersteuersätze eintragen und speichern
-* testen
-* wenns läuft, ein Bierchen trinken. Wenn nicht, dann zwei.
 
 ## Funktionsweise 
-In den Einstellungen muss man den Standard-Steuersatz hinterlegen (normalerwise 19%).  
+.  
 Falls der Artikel über keinen eigenen Steuersatz verfügt, wird der jeweils volle Steuersatz für das aktuell ausgewählte Rechnungsandressen-Land genommen, sonst der reduzierte Steuersatz.
+
 ### Beispielrechnung:
 Standard Steuersatz: 19%  
 Produkt hat keinen eigenen Steuersatz + Lieferland Österreich -> 20% (bzw das, was ihr eingetragen habt)  
@@ -30,9 +26,8 @@ Bitte Prüft vorher, ob ihr Produkte im Shop habt, die in DE einem reduzierten M
 
 
 ### LICENSE AGREEMENT
-   countryspecific VAT and static brutto price no matter of VAT percentage  
-   Copyright (C) 2016 bestlife AG  
-   info:  oxid@bestlife.ag  
+   country specific VAT and static brutto price no matter of VAT percentage  
+   Copyright (C) 2021   
   
    This program is free software;  
    you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation;
