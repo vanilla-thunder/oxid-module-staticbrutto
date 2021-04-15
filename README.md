@@ -14,7 +14,7 @@ Dieses Modul lässt den Brutto-Preris unabhängig vom Steuersatz gleich bleiben,
 * Unter "Stammdaten" -> "Mwst. Sätze" die Mehrwersteuersätze eintragen und speichern
 
 ## Funktionsweise 
-.  
+![demo](thumbnail.jpg)
 Falls der Artikel über keinen eigenen Steuersatz verfügt, wird der jeweils volle Steuersatz für das aktuell ausgewählte Rechnungsandressen-Land genommen, sonst der reduzierte Steuersatz.
 
 ### Beispielrechnung:
