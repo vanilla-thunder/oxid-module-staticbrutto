@@ -29,7 +29,7 @@
   },
   "extra": {
     "oxideshop": {
-      "target-directory": "vt/staticbrutto"
+      "target-directory": "vt/StaticBrutto"
     }
   }
 }
