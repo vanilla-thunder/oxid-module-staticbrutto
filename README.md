@@ -1,5 +1,5 @@
 ## Länderspezifische Mehrwertsteuer + fester Brutto-Preis unabhängig vom Steuersatz Für OXID eShop
-### Modul Version 2.1.0
+### Modul Version 2.1.1
 
 Bei länderspezifischen Mehrwertsteuersätzen berechnet OXID zuerst den Netto-Preis und addiert dann die jeweiligen MwSt dazu, wodurch sich der Bruttopreis im WK ändert.
 Dieses Modul lässt den Brutto-Preris unabhängig vom Steuersatz gleich bleiben, so dass der Netto-Preis jeweils angepasst wird. 
