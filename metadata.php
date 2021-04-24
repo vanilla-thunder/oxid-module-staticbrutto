@@ -30,7 +30,7 @@ $aModule = array(
         'de' => '<ul><li>grundlegende Unterstützung für länderspezifische Mehrwertwsteuersätze</li><li>behält den selben Brutto Preis bei unterschiedlichen MwSt. Sätzen</li></ul><img src="../modules/vt/StaticBrutto/thumbnail.jpg"/>',
         'en' => '<ul><li>basic support for country specific VAT</li><li>keeps same brutto price among different VAT percentages</li></ul><img src="../modules/vt/StaticBrutto/thumbnail.jpg"/>',
     ],
-    'version' => '2.1.0',
+    'version' => '2.1.1',
     'thumbnail' => '',
     'author' => 'Marat Bedoev & ProudCommerce & Florian Palme',
     'url' => 'https://github.com/vanilla-thunder/oxid-module-staticbrutto',
