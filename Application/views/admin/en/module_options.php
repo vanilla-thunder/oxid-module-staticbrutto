@@ -17,7 +17,7 @@ $style = '<style type="text/css">.groupExp a.rc b {font-size: medium; color: #ff
 $aLang = array(
     'charset' => 'UTF-8',
     'SHOP_MODULE_GROUP_StaticBruttoVatMain' => $style . 'Options',
-    'SHOP_MODULE_aaStaticBruttoFullVat' => 'full VAT rates',
-    'SHOP_MODULE_aaStaticBruttoReducedVat' => 'reduced VAT rates',
+    'SHOP_MODULE_aaStaticBruttoFullVat' => 'your default VAT rates (usually the full one)',
+    'SHOP_MODULE_aaStaticBruttoReducedVat' => 'alternative VAT rates (usually the reduced one)',
 
 );
