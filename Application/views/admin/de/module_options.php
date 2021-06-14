@@ -17,7 +17,7 @@ $style = '<style type="text/css">.groupExp a.rc b {font-size: medium; color: #ff
 $aLang = array(
     'charset' => 'UTF-8',
     'SHOP_MODULE_GROUP_StaticBruttoVatMain' => $style . 'Einstellungen',
-    'SHOP_MODULE_aaStaticBruttoFullVat' => 'die vollen MwSt. S&auml;tze',
-    'SHOP_MODULE_aaStaticBruttoReducedVat' => 'die verminderten MwSt. S&auml;tze',
+    'SHOP_MODULE_aaStaticBruttoFullVat' => 'standard S&auml;tze (wahrscheinlich voll)',
+    'SHOP_MODULE_aaStaticBruttoReducedVat' => 'spezielle S&auml;tze (wahrscheinlich reduziert)',
 
 );
