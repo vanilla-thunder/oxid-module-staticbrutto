@@ -49,10 +49,11 @@ class oxvatselector_vat extends oxvatselector_vat_parent
         if ($oUser = oxRegistry::getSession()->getBasket()->getBasketUser())
         {
             // got default vat?
-            $aVatRates   = ($ret == $cfg->getConfigParam('dDefaultVAT')) ? oxRegistry::getConfig()->getConfigParam("aaBlaFullVat") : oxRegistry::getConfig()->getConfigParam("aaBlaReducedVat");
-            $sVatCountry = $this->_getVatCountry($oUser);
-            if (isset($aVatRates[$sVatCountry]))
-                $ret = $aVatRates[$sVatCountry];
+            if($ret > 0) {
+                $aVatRates   = ($ret == $cfg->getConfigParam('dDefaultVAT')) ? oxRegistry::getConfig()->getConfigParam("aaBlaFullVat") : oxRegistry::getConfig()->getConfigParam("aaBlaReducedVat");
+                $sVatCountry = $this->_getVatCountry($oUser);
+                if (isset($aVatRates[$sVatCountry])) $ret = $aVatRates[$sVatCountry];
+            }
         }
 
         return $ret;
