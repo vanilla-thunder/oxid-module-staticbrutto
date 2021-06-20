@@ -17,8 +17,8 @@ Dieses Modul lässt den Brutto-Preris unabhängig vom Steuersatz gleich bleiben,
 ![demo](thumbnail.jpg)
 Falls der Artikel über keinen eigenen Steuersatz verfügt, wird der jeweils volle Steuersatz für das aktuell ausgewählte Rechnungsandressen-Land genommen, sonst der reduzierte Steuersatz.
 
-Demo: https://demoshop.mb-dev.pro/MwSt-Test/
-login: test@test.test
+Demo: https://demoshop.mb-dev.pro/MwSt-Test/  
+login: test@test.test  
 pw: test
 
 ### Beispielrechnung:
