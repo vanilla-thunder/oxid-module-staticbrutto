@@ -6,10 +6,7 @@ Dieses Modul lässt den Brutto-Preris unabhängig vom Steuersatz gleich bleiben,
 Benutzung auf eigene Gefahr! Rauchen kann tödlich sein!
 
 ## Installation:
-* Archiv herunterladen:  
-   für 4.9: https://github.com/vanilla-thunder/bla-staticbrutto/archive/master.zip  
-   für 4.6: https://github.com/vanilla-thunder/bla-staticbrutto/archive/4.6.zip
-* entpacken 
+* Branch "oxid-4.10" als ZIP Archiv herunterladen und entpacken 
 * Inhalt von "copy_this" in den Shop hochladen
 * Prüfen, ob alle benötigten Länder aktiv sind
 * Modul aktivieren
