@@ -26,8 +26,8 @@
 			[{assign var="id" value=$country->oxcountry__oxid->value }]
 			<tr>
 				<td><label>[{$country->oxcountry__oxtitle->value}]</label></td>
-				<td><input type="text" name="aaBlaFullVat[[{$country->oxcountry__oxid->value}]]"  value="[{ $firstvats.$id }]"  size="3"/>%</td>
-				<td><input type="text" name="aaBlaReducedVat[[{$country->oxcountry__oxid->value}]]" value="[{ $secondvats.$id }]" size="3"/>%</td>
+				<td><input type="text" name="aaBlaFullVat[[{$country->oxcountry__oxid->value}]]"  value="[{ $aaBlaFullVat.$id }]"  size="3"/>%</td>
+				<td><input type="text" name="aaBlaReducedVat[[{$country->oxcountry__oxid->value}]]" value="[{ $aaBlaReducedVat.$id }]" size="3"/>%</td>
 			</tr>
 		[{/foreach}]
 		<tr>
