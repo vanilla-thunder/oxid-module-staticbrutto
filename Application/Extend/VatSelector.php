@@ -19,21 +19,22 @@ class VatSelector extends VatSelector_parent
     /**
      * @inheritdoc
      */
-    public function getArticleVat(\OxidEsales\Eshop\Application\Model\Article $oArticle)
+    public function getBasketItemVat(\OxidEsales\Eshop\Application\Model\Article $oArticle, $oBasket)
     {
-        $ret = parent::getArticleVat($oArticle);
-        if ($oUser = \OxidEsales\Eshop\Core\Registry::getSession()->getBasket()->getBasketUser())
+        $dVat = parent::getBasketItemVat($oArticle, $oBasket);
+        if ($oUser = $oBasket->getBasketUser())
         {
             // got default vat?
-            if ($ret > 0)
+            if ($dVat > 0)
             {
                 $cfg = \OxidEsales\Eshop\Core\Registry::getConfig();
-                $aVatRates   = ($ret == $cfg->getConfigParam('dDefaultVAT')) ? $cfg->getConfigParam("aaStaticBruttoFullVat") : $cfg->getConfigParam("aaStaticBruttoReducedVat");
+                //var_dump($cfg->getConfigParam('dDefaultVAT'));
+                $aVatRates   = ($dVat == $cfg->getConfigParam('dDefaultVAT')) ? $cfg->getConfigParam("aaStaticBruttoFullVat") : $cfg->getConfigParam("aaStaticBruttoReducedVat");
                 $sVatCountry = (method_exists($this, "_getVatCountry") ? $this->_getVatCountry($oUser) : $this->getVatCountry($oUser)); // _getVatCountry is depracted, will be removed soon
-                if (isset($aVatRates[$sVatCountry])) $ret = $aVatRates[$sVatCountry];
+                if (isset($aVatRates[$sVatCountry])) $dVat = $aVatRates[$sVatCountry];
+                Registry::getSession()->getBasket()->onUpdate();
             }
         }
-
-        return $ret;
+        return $dVat;
     }
 }
