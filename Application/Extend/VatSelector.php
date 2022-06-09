@@ -21,13 +21,18 @@ class VatSelector extends VatSelector_parent
     /**
      * @inheritDoc
      */
-    public function getArticleVat(\OxidEsales\Eshop\Application\Model\Article $oArticle)
+    public function getBasketItemVat(\OxidEsales\Eshop\Application\Model\Article $oArticle, $oBasket)
     {
+<<<<<<< HEAD
         $dVat =  parent::getArticleVat($oArticle);
 
         return $dVat;
         //if (($sVatCountry = $_COOKIE["sVatCountry"]) || ($oUser = \OxidEsales\Eshop\Core\Registry::getSession()->getBasket()->getBasketUser()))
         if ($oUser = \OxidEsales\Eshop\Core\Registry::getSession()->getBasket()->getBasketUser())
+=======
+        $dVat = parent::getBasketItemVat($oArticle, $oBasket);
+        if ($oUser = $oBasket->getBasketUser())
+>>>>>>> e3504dac9d573133e07b715400c2629f01d7c637
         {
             // got default vat?
             if ($dVat > 0)
@@ -40,6 +45,7 @@ class VatSelector extends VatSelector_parent
                 Registry::getSession()->getBasket()->onUpdate();
             }
         }
+<<<<<<< HEAD
 
         return $dVat;
     }
@@ -63,6 +69,8 @@ class VatSelector extends VatSelector_parent
                 Registry::getSession()->getBasket()->onUpdate();
             }
         }
+=======
+>>>>>>> e3504dac9d573133e07b715400c2629f01d7c637
         return $dVat;
     }
 }
