@@ -27,8 +27,8 @@ $aModule = array(
         'en' => '[vt] static brutto prices'
     ],
     'description' => [
-        'de' => '<ul><li>grundlegende Unterstützung für länderspezifische Mehrwertwsteuersätze</li><li>behält den selben Brutto Preis bei unterschiedlichen MwSt. Sätzen</li></ul><img src="../modules/vt/StaticBrutto/thumbnail.jpg"/>',
-        'en' => '<ul><li>basic support for country specific VAT</li><li>keeps same brutto price among different VAT percentages</li></ul><img src="../modules/vt/StaticBrutto/thumbnail.jpg"/>',
+        'de' => '<ul><li>grundlegende Unterstützung für länderspezifische Mehrwertwsteuersätze</li><li>behält den selben Brutto Preis bei unterschiedlichen MwSt. Sätzen</li></ul><img style="max-width: 100%;" src="../modules/vt/StaticBrutto/thumbnail.jpg"/>',
+        'en' => '<ul><li>basic support for country specific VAT</li><li>keeps same brutto price among different VAT percentages</li></ul><img style="max-width: 100%;" src="../modules/vt/StaticBrutto/thumbnail.jpg"/>',
     ],
     'version' => '2.1.1',
     'thumbnail' => '',
@@ -36,6 +36,8 @@ $aModule = array(
     'url' => 'https://github.com/vanilla-thunder/oxid-module-staticbrutto',
     'email' => openssl_decrypt("Az6pE7kPbtnTzjHlPhPCa4ktJLphZ/w9gKgo5vA//p4=", str_rot13("nrf-128-pop"), str_rot13("gvalzpr")),
     'extend' => [
+        \OxidEsales\Eshop\Application\Model\Article::class => \VanillaThunder\StaticBrutto\Application\Extend\Article::class,
+        \OxidEsales\Eshop\Application\Model\OrderArticle::class => \VanillaThunder\StaticBrutto\Application\Extend\OrderArticle::class,
         \OxidEsales\Eshop\Application\Model\VatSelector::class => \VanillaThunder\StaticBrutto\Application\Extend\VatSelector::class,
     ],
     'controllers' => [

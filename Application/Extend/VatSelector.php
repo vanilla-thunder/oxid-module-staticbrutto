@@ -14,26 +14,55 @@
 
 namespace VanillaThunder\StaticBrutto\Application\Extend;
 
+use OxidEsales\Eshop\Core\Registry;
+
 class VatSelector extends VatSelector_parent
 {
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     public function getArticleVat(\OxidEsales\Eshop\Application\Model\Article $oArticle)
     {
-        $ret = parent::getArticleVat($oArticle);
+        $dVat =  parent::getArticleVat($oArticle);
+
+        return $dVat;
+        //if (($sVatCountry = $_COOKIE["sVatCountry"]) || ($oUser = \OxidEsales\Eshop\Core\Registry::getSession()->getBasket()->getBasketUser()))
         if ($oUser = \OxidEsales\Eshop\Core\Registry::getSession()->getBasket()->getBasketUser())
         {
             // got default vat?
-            if ($ret > 0)
+            if ($dVat > 0)
             {
                 $cfg = \OxidEsales\Eshop\Core\Registry::getConfig();
-                $aVatRates   = ($ret == $cfg->getConfigParam('dDefaultVAT')) ? $cfg->getConfigParam("aaStaticBruttoFullVat") : $cfg->getConfigParam("aaStaticBruttoReducedVat");
+                //var_dump($cfg->getConfigParam('dDefaultVAT'));
+                $aVatRates   = ($dVat == $cfg->getConfigParam('dDefaultVAT')) ? $cfg->getConfigParam("aaStaticBruttoFullVat") : $cfg->getConfigParam("aaStaticBruttoReducedVat");
                 $sVatCountry = (method_exists($this, "_getVatCountry") ? $this->_getVatCountry($oUser) : $this->getVatCountry($oUser)); // _getVatCountry is depracted, will be removed soon
-                if (isset($aVatRates[$sVatCountry])) $ret = $aVatRates[$sVatCountry];
+                if (isset($aVatRates[$sVatCountry])) $dVat = $aVatRates[$sVatCountry];
+                Registry::getSession()->getBasket()->onUpdate();
             }
         }
 
-        return $ret;
+        return $dVat;
+    }
+
+    /**
+     * @inheritDoc
+     */
+    public function getBasketItemVat(\OxidEsales\Eshop\Application\Model\Article $oArticle, $oBasket)
+    {
+        $dVat = parent::getBasketItemVat($oArticle, $oBasket);
+        if ($oUser = $oBasket->getBasketUser())
+        {
+            // got default vat?
+            if ($dVat > 0)
+            {
+                $cfg = \OxidEsales\Eshop\Core\Registry::getConfig();
+                //var_dump($cfg->getConfigParam('dDefaultVAT'));
+                $aVatRates   = ($dVat == $cfg->getConfigParam('dDefaultVAT')) ? $cfg->getConfigParam("aaStaticBruttoFullVat") : $cfg->getConfigParam("aaStaticBruttoReducedVat");
+                $sVatCountry = (method_exists($this, "_getVatCountry") ? $this->_getVatCountry($oUser) : $this->getVatCountry($oUser)); // _getVatCountry is depracted, will be removed soon
+                if (isset($aVatRates[$sVatCountry])) $dVat = $aVatRates[$sVatCountry];
+                Registry::getSession()->getBasket()->onUpdate();
+            }
+        }
+        return $dVat;
     }
 }
